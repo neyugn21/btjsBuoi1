@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let student = {
+        FullName: "Linh Thuy Vu",
+        birthYear: 2000,
+        adress:{
+            city: "Ha Noi",
+            country: "Viet Nam"
+        },
+        score: [9,9,10],
+        getAge: function(){
+           this.age = 2024 - this.birthYear;
+           return this.age;
+        },
+        diemTB: function(){
+            sumScore = this.score.reduce((a,b)=>a+b,0)
+            return sumScore/3
+        }
+       }
+
+       let teacher = {
+        "ho ten" : "Nguyen Van B",
+        "nam sinh":1999,
+        "dia chi" :{
+            "thanh pho": "Ha Noi",
+            "quoc gia": "Viet Nam"
+        }
+       }
+        console.log(typeof teacher)
+        console.log(typeof student)
+
+        console.log(student.FullName);
+        console.log(student.getAge());
+        console.log(student.diemTB());
+        console.log(student.age);
+        
+        
+        
+        // console.log(teacher["ho ten"]);
+        // console.log(teacher["nam sinh"]);
+        // console.log(teacher["dia chi"]["thanh pho"]);
+        // console.log(teacher["dia chi"]["quoc gia"]);
+        // console.log(student["FullName"]);
+
+        // let inputKey = prompt("Mời nhập key: (adress,  score)");
+        // console.log(student[inputKey]);
+        
+        
+        
+    </script>
+</body>
+</html>

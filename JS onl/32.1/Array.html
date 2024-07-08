@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng</title>
+</head>
+<body>
+    <script>
+    // 1.conact(): Nối mảng hiện tại với mảng khác
+    let arr1 = [1,2,3];
+    let arr2 = [7,8,9];
+    let arr3 = [10,111,29];
+
+    let newArr = arr1.concat(arr2.concat(arr3));
+    console.log(newArr);
+
+
+    // 2. Push() Thêm 1 hoặc nhiều phần tử vào mảng gốc.
+    let arr4 = ['a','b','c'];
+    arr4.push('d','e','f');
+    console.log(arr4);
+
+    // 3. unshift() Thêm 1 hoặc nhiều phần tử vào đầu mảng gốc.
+    let arr5 = ['a','b','c'];
+    arr5.unshift(1,2,3,6)
+    console.log(arr5);
+
+    // 4.pop() Loại bỏ 1 phần tử cuối cùng của mảng (làm thay đổi mảng gốc) và trả về phần tử đã bị loại bỏ
+        // shift() Ngược lại với pop()
+    let arr6 = [1,2,3,4,5,6];
+    let arr7 = arr6.pop();
+    console.log(arr6)
+    console.log(arr7);
+
+
+    console.log(arr6.shift());
+    console.log(arr6)
+
+    // 5.Slice(start, end):tao 1 bản sao của mảng
+
+    let arr8 = [1,2,3,4,5,6,7,8,9,10];
+    let sliceArr8 = arr8.slice(0,5);
+    console.log(arr8)
+    console.log(sliceArr8)
+    // 6.includes(): Kiem tra 1 phần tử có trong mảng hay khong
+    let arr9 = [1,2,3,4,5,6,7,8,9,10,'nam'];
+    let check = arr9.includes('nam5');
+    console.log(check);
+    // 7. indexOf(): trả về vị trí index của phần tử đầu tiên trong mảng nếu tìm thấy. Không tìm thấy trả về -1
+
+    let arr10 = [1,5,4,7,2,6,5,8,7]
+    let index = arr10.indexOf(7)
+    console.log(index)
+
+    // 8.lastIndexOf(): trả về vị trí index của phần tử cuối trong mảng nếu tìm thấy. Không tìm thấy trả về -1
+
+    let arr11 = [1,5,4,7,2,6,5,8,7]
+    let index1 = arr11.lastIndexOf(7)
+    console.log(index1)
+
+    // 9.reverse(): Đảo ngược mảng và thay đổi luôn mảng gốc không tạo ra mảng mới
+    let arr12 = [1,5,4,7,2,6,5,8,7]
+   let arr13 = arr12.slice()
+    arr13.reverse()
+    console.log(arr12)
+    console.log(arr13)
+
+    // 10. join(separator): Nối các phần tử trong mảng thành chuỗi theo ký tự phân tách separator.
+    // separator: bỏ trống mặc định là dấu ","
+    // Phương thức này không làm thay đổi mảng gốc
+
+    let arr14 = ["thanh","Linh",1,2,3,4]
+    let arr15 = arr14.join()
+    console.log(arr15)
+    console.log(typeof arr15)
+
+    let arr17 = ["thanh","Linh",1,2,3,4]
+    let arr18 = arr14.join("?")
+    console.log(arr18)
+    console.log(typeof arr18)
+
+    // 11.Splice(): Xóa 1 hoặc nhiều phần tử trong mảng và thêm phần tử mới vào chỗ bắt đầu xoá
+    
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra password</title>
+  </head>
+  <body>
+    <script>
+     
+      let password1 = "abc1323def";
+      let password2 = "abcdef";
+
+      function kiemtraPass(password) {
+          const kt = password.match(/[0-9]/g);
+          return kt && kt.length >= 2;
+      }
+
+      console.log(kiemtraPass(password1));
+      console.log(kiemtraPass(password2));
+    </script>
+  </body>
+</html>

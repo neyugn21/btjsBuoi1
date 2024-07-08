@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tách chữ và số</title>
+</head>
+<body>
+    <script>
+        function ChangeText(msg) {
+            let text = ""
+            let so = ""
+
+            // for (let i = 0; i < msg.length; i++) {
+            //     if(msg[i] >= 0 && msg[i] <= 9) {
+                    
+            //         so += msg[i]
+            //     } else {
+            //         text += msg[i]
+            //     }
+            // }
+            // return [text, so]
+
+            for(let i = 0; i < msg.length; i++) {
+                let char = msg[i];
+                if(isNaN(char)) {
+                    text += char
+                }else{
+                    so += char
+                }
+            }
+                return {text, so}
+        }
+
+        let msg = prompt("Nhập 1 chuỗi: ");
+        let kq = ChangeText(msg);
+       alert(` chuỗi chữ là: ${kq.text} ,số là: ${kq.so}`);
+    </script>
+</body>
+</html>

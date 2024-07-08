@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng 2</title>
+</head>
+<body>
+    <script>
+         // 11.Splice(): Xóa 1 hoặc nhiều phần tử trong mảng và thêm phần tử mới vào chỗ bắt đầu xoá
+         let arr1 = [1,2,3,4,5,6,7,8,9,10];
+     let arr2 =    arr1.splice(-3,0,4,6)
+         console.log(arr1)
+         console.log(arr2)
+
+        //  12. Toán tử Spread(...) ES6
+        // 1.Tạo bản sao clone của mảng
+
+        let M1 = ["nam","khanh","thanh","linh"];
+        let M2 = [...M1];
+        M2[0] =99
+        console.log(M1)
+        console.log(M2)
+       
+        // 2.Truyền đối số vào hàm
+        function sum(a,b,c){
+            return a + b + c
+        }
+        let numbers = [1,2,3];
+        let result = sum(...numbers)
+        console.log(result)
+        // 3.Kết hợp mảng
+
+        let arr4 = [1,2,3];
+        let arr5 =["linh","thanh","khanh"];
+        let arr6 = [...arr4,...arr5];
+        console.log(arr6)
+
+        // 4.Tạo mảng mới và thêm phần tử
+
+        let M3 = [1,2,3]
+        let M4 = [...M3,4]  
+        console.log(M4)
+        // 5.Tách chuỗi
+
+        let name = "Nguyen Tien Thanh"
+        let name2 = [...name]
+        console.log(name2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1,2,3,4,5];
+        
+        /*
+        array.filter(Function)
+        function(currentValue, [currentIndex], [array])
+        currentValue: giá trị hiện tại đang xử lý trong mảng
+        currentIndex: (tuỳ chọn) chỉ số của phần tử đang sử lý.
+        array(tuỳ chọn): mảng đang được duyệt
+        */
+        let evenNumbers = numbers.filter(
+            (value, index, array) => value % 2 ===0
+        )
+
+        console.log(evenNumbers)
+    </script>
+</body>
+</html>

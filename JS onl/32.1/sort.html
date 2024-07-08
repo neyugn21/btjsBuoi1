@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức sort</title>
+</head>
+<body>
+    <script>
+        let M1 = ["gd","ac","d","f","t"]
+        console.log(M1)
+
+       for(let value of M1) {
+        console.log(`${value} có mã unicode là: ${value.charCodeAt()}`)
+       }
+        
+       let M2 = M1.sort()
+       console.log(M2)
+
+       let M3 = ["3","10","8","1000"]
+     for(let i=0;i<M3.length;i++) {
+        console.log(M3[i] +" có mà unicode là " + M3[i].charCodeAt())
+     }
+     M3.sort()
+     console.log(M3)
+
+     let M4 = [9,5,1,7,10]
+     console.log(M4)
+    //  let sorTed = M4.sort(function(a,b) {
+    //     return a-b
+    //  })  
+
+    // a-b < 0 thì a đặt trước b
+    // a-b > 0 thì b đặt trước a
+    // a-b = 0 thì giữ nguyên
+    let sorTed = M4.sort((a,b)=> a-b)
+     console.log(sorTed)
+    </script>
+</body>
+</html>

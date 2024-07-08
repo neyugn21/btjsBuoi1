@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="so1">
+    <span>+</span>
+    <input type="text" id ="so2">
+    <span>=</span> 
+    <input type="text" id="ketQua">
+    <button onclick="sum()">Tính</button>
+    <script>
+        function sum(){
+            let a = document.getElementById("so1").value;
+            let b = document.getElementById("so2").value;
+            // let c = document.getElementById("ketQua").value;
+          let  c = Number(a) + Number(b);
+            document.getElementById("ketQua").value = c
+            document.getElementById("ketQua").innerHTML = c
+        }
+    </script>
+</body>
+</html>

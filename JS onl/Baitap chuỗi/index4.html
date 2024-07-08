@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm từ giống nhau trong chuỗi</title>
+</head>
+<body>
+    <script>
+        let msg = prompt("Nhập 1 chuỗi: ");
+        let count = 0;
+        let name = "toi";
+
+        for(let i = 0; i < msg.length; i++){
+            if(msg.slice(i, i+name.length) == name){
+                count++;
+            }
+        }
+        console.log(`Số lần từ toi xuất hiện trong chuỗi ${msg} là: ${count}`);
+    </script>
+</body>
+</html>

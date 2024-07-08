@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm reduce</title>
+</head>
+<body>
+    <script>
+            let M1 =[1,2,3,4]
+            sum = 0;
+
+            for(let value of M1){
+                sum+= value
+            }
+            console.log("Tổng các phần tử trong mảng: "+sum)
+
+
+            let sum2 = M1.reduce(
+                (accumulator, currentValue, currenIndex, array) =>{
+                    return accumulator + currentValue
+                },0
+            )
+            console.log(sum2)
+
+                // a biến lưu trữ
+                // b giá trị hiện tại
+            let sum3 = M1.reduce((a,b)=>a+b,0)
+            console.log(sum3)
+    </script>
+</body>
+</html>
