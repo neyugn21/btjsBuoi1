@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+</head>
+<body>
+    <script>
+        function menu(){
+            alert(`
+              Mời chọn chức năng
+                1.Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+                2.Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+                3.Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+                4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+                5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+               
+                0: Thoát
+
+            `
+                
+        )
+        let choice = parseInt(prompt("Mời chọn chức năng (0-6): "));
+        return choice;
+        }
+            
+              
+ 
+        function main() {
+    let choice;
+    do {
+        choice = menu();
+        switch (choice) {
+            case 0:
+                console.log("Thoát chương trình");
+                break;
+            case 1:
+                let a = parseInt(prompt("Nhập số a: "));
+                let b = parseInt(prompt("Nhập số b: "));
+                if (b === 0) {
+                    console.log("Không thể chia cho 0");
+                } else if (a % b === 0) {
+                    console.log(`${a} chia hết cho ${b}`);
+                } else {
+                    console.log(`${a} không chia hết cho ${b}`);
+                }
+                break;
+            case 2:
+                let tuoi = parseInt(prompt("Nhập tuổi của học sinh: "));
+                if (tuoi >= 15) {
+                    console.log("Học sinh đủ điều kiện vào học lớp 10");
+                } else {
+                    console.log("Học sinh không đủ điều kiện vào học lớp 10");
+                }
+                break;
+            case 3:
+                let so = parseInt(prompt("Nhập một số nguyên: "));
+                if (so > 0) {
+                    console.log("Số này lớn hơn 0");
+                } else if (so < 0) {
+                    console.log("Số này nhỏ hơn 0");
+                } else {
+                    console.log("Số này bằng 0");
+                }
+                break;
+            case 4:
+                let so1 = parseInt(prompt("Nhập số thứ nhất: "));
+                let so2 = parseInt(prompt("Nhập số thứ hai: "));
+                let so3 = parseInt(prompt("Nhập số thứ ba: "));
+                let max = Math.max(so1, so2, so3);
+                console.log(`Giá trị lớn nhất là: ${max}`);
+                break;
+            case 5:
+                let diemBaiKiemTra = parseFloat(prompt("Nhập điểm bài kiểm tra: "));
+                let diemGiuaKy = parseFloat(prompt("Nhập điểm thi giữa kỳ: "));
+                let diemCuoiKy = parseFloat(prompt("Nhập điểm thi cuối kỳ: "));
+                let diemTrungBinh = (diemBaiKiemTra + diemGiuaKy + diemCuoiKy) / 3;
+                if (diemTrungBinh >= 8.5) {
+                    console.log("Học lực giỏi");
+                } else if (diemTrungBinh >= 6.5) {
+                    console.log("Học lực khá");
+                } else if (diemTrungBinh >= 5.0) {
+                    console.log("Học lực trung bình");
+                } else {
+                    console.log("Học lực yếu");
+                }
+                break;
+           
+            default:
+                console.log("Lựa chọn không hợp lệ. Vui lòng chọn từ 0 đến 5.");
+                break;
+        }
+    } while (choice !== 0);
+}
+main();
+       
+       
+    </script>
+</body>
+</html>
